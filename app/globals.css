@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-poppins);
+}
+
+:root {
+  --background: #121218;
+  --foreground: #F0F0F0;
+  --card: #1E1E2A;
+  --card-foreground: #F0F0F0;
+  --popover: #1E1E2A;
+  --popover-foreground: #F0F0F0;
+  --primary: #ffffff;
+  --primary-foreground: #121218;
+  --secondary: #2C2C3E;
+  --secondary-foreground: #F0F0F0;
+  --muted: #2C2C3E;
+  --muted-foreground: #C0C0C0;
+  --accent: #2C2C3E;
+  --accent-foreground: #F0F0F0;
+  --destructive: #FF0000;
+  --destructive-foreground: #F0F0F0;
+  --border: #3A3A5A;
+  --input: #2C2C3E;
+  --ring: #d89cf6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom Utilities for that 'Hip' feel */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(216, 156, 246, 0.3);
+  }
+
+  .glass-panel {
+    background: rgba(30, 30, 42, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-pill-active {
+    box-shadow: 0 0 15px currentColor;
+  }
+}
+
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 60s linear infinite;
+}
